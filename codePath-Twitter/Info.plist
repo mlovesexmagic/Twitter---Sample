@@ -27,7 +27,7 @@
 			<string>com.malemotive.Twitter</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>cptwitterdemo</string>
+				<string>adrianCoolApp</string>
 			</array>
 		</dict>
 	</array>
