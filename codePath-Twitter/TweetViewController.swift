@@ -55,10 +55,10 @@ class TweetViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("TweetTableViewCell", forIndexPath: indexPath) as! TweetTableViewCell
         
-        cell.profileImage.setImageWithURL(NSURL(string: tweets![indexPath.row].user!.profileImageUrl!)!)
+        cell.profileView.setImageWithURL(NSURL(string: tweets![indexPath.row].user!.profileViewUrl!)!)
         cell.userName.text = tweets![indexPath.row].user!.name!
-        cell.userHandle.text = tweets![indexPath.row].user!.screenname!
-        cell.tweetContentText.text = tweets![indexPath.row].text!
+        cell.userHandle.text = tweets![indexPath.row].user!.handle!
+        cell.tweetDescription.text = tweets![indexPath.row].text!
         cell.createdTime.text = tweets![indexPath.row].createdAtString!
         
         return cell
