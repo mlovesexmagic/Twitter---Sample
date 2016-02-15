@@ -35,7 +35,7 @@ class TweetViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     @IBAction func onLogout(sender: AnyObject) {
-        User.currentUser!.logout()
+        User.currentUser?.logout()
         
     }
     

@@ -91,8 +91,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="createdTime" destination="BSg-VE-NvD" id="pMf-Ym-VVT"/>
-                                            <outlet property="profileImage" destination="5Je-zC-rwR" id="IOt-IH-Vmi"/>
-                                            <outlet property="tweetContentText" destination="O3Z-gX-Itb" id="FnU-Uv-E3f"/>
+                                            <outlet property="profileView" destination="5Je-zC-rwR" id="4Q1-HS-MSU"/>
+                                            <outlet property="tweetDescription" destination="O3Z-gX-Itb" id="SbA-xc-SgT"/>
                                             <outlet property="userHandle" destination="yOA-3F-Hzt" id="Wde-Nv-rqe"/>
                                             <outlet property="userName" destination="l0f-bu-hzn" id="bxk-DN-1hP"/>
                                         </connections>
@@ -100,11 +100,11 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d79-sS-kC3">
-                                <rect key="frame" x="0.0" y="15" width="320" height="15"/>
+                                <rect key="frame" x="0.0" y="15" width="320" height="22"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNR-Br-htE">
-                                        <rect key="frame" x="268" y="-4" width="43" height="26"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                        <rect key="frame" x="265" y="-2" width="50" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                         <state key="normal" title="Log Out"/>
                                         <connections>
                                             <action selector="onLogout:" destination="uZW-2e-Skz" eventType="touchUpInside" id="KgD-oe-MC1"/>
