@@ -86,8 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-codePath-Twitter/AFNetworking.framework"
   install_framework "Pods-codePath-Twitter/BDBOAuth1Manager.framework"
+  install_framework "Pods-codePath-Twitter/SwiftMoment.framework"
+  install_framework "Pods-codePath-Twitter/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-codePath-Twitter/AFNetworking.framework"
   install_framework "Pods-codePath-Twitter/BDBOAuth1Manager.framework"
+  install_framework "Pods-codePath-Twitter/SwiftMoment.framework"
+  install_framework "Pods-codePath-Twitter/SwiftyJSON.framework"
 fi

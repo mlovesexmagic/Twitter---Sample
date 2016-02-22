@@ -6,7 +6,8 @@
 //  Copyright © 2016 Zhipeng Mei. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import SwiftyJSON
 
 var _currentUser: User?
 let currentUserKey = "thisCurrentUserKey"
@@ -19,6 +20,10 @@ class User: NSObject {
     var profileViewUrl: String?
     var tagline: String?
     var dictionary: NSDictionary
+    var statusPostCount: Int?
+    var followerCount: Int?
+    var friendCount: Int?
+    //var jsonData: JSON?
     
     init(dictionary: NSDictionary) {
         self.dictionary = dictionary
@@ -27,6 +32,7 @@ class User: NSObject {
         handle = dictionary["screen_name"] as? String
         profileViewUrl = dictionary["profile_image_url"] as? String
         tagline = dictionary["description"] as? String
+ 
     }
     
     func logout() {
