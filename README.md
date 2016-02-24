@@ -60,14 +60,14 @@ Describe any challenges encountered while building the app.
 
 # Project 5 - *翻版twitter Reduxe*
 
-Time spent: **X** hours spent in total
+Time spent: **12+** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is completed:
 
 - [x] Tweet Details Page: User can tap on a tweet to view it, with controls to retweet, favorite, and reply.
-- [ x] Profile page:
+- [x] Profile page:
    - [x] Contains the user header view
    - [x] Contains a section with the users basic stats: # tweets, # following, # followers
 - [ ] Home Timeline: Tapping on a user image should bring up that user's profile page
@@ -100,7 +100,9 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/0jVesKz.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/nRR83fX.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/lYujaha.gif' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/NMSFqex.gif' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
