@@ -231,6 +231,7 @@
                                                         <constraint firstAttribute="width" constant="20" id="ZAK-NN-yTT"/>
                                                     </constraints>
                                                     <connections>
+                                                        <action selector="onReply:" destination="6oi-rO-HLE" eventType="touchUpInside" id="jGo-46-czJ"/>
                                                         <action selector="onReplyClicked:" destination="uZW-2e-Skz" eventType="touchUpInside" id="Lf5-0h-V8m"/>
                                                     </connections>
                                                 </button>
@@ -700,7 +701,7 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="69 m" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lty-hY-PNH">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="69 m" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lty-hY-PNH">
                                                     <rect key="frame" x="283" y="30" width="29" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>

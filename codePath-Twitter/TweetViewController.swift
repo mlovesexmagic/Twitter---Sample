@@ -17,11 +17,13 @@
 import UIKit
 import SwiftMoment
 
+
+
 class TweetViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    
+    private var tweetsMain =  [Tweet]()
     var tweets: [Tweet]?
-    var tweetsBackup: Tweet!
+    var tweetsBackup: Tweet?
     var refreshControl: UIRefreshControl!
     
     //testing
@@ -104,6 +106,8 @@ class TweetViewController: UIViewController, UITableViewDataSource, UITableViewD
         if liked == false {
             TwitterClient.sharedInstance.favoriteWithCompletion(["id": tweets![indexPath.row].id!]) { (tweet, error) -> () in
                 
+                
+                //heart animation when fav clicked
                 let ImageName = "heart-"
                 var imagesNames = [ "\(ImageName)1","\(ImageName)2","\(ImageName)3","\(ImageName)4","\(ImageName)5","\(ImageName)6","\(ImageName)7","\(ImageName)8","\(ImageName)9","\(ImageName)10"]
                 var images = [UIImage]()
@@ -116,15 +120,9 @@ class TweetViewController: UIViewController, UITableViewDataSource, UITableViewD
                 cell.llikeImageView.animationDuration = 1
                 cell.llikeImageView.animationRepeatCount = 1
                 cell.llikeImageView.image = UIImage(named: "like-clicked")
-
                 cell.llikeImageView.startAnimating()
-      
-                
-                //cell.llikeImageView.image = cell.llikeImageView.image.lastObject
-
-                
+    
                 self.liked = true
-                
                 print("You liked \(self.tweets![indexPath.row].user!.name!)'s post")
                 self.tweets![indexPath.row].favCount += 1
                 cell.likeCount.text = "\(self.tweets![indexPath.row].favCount)"
@@ -216,21 +214,17 @@ class TweetViewController: UIViewController, UITableViewDataSource, UITableViewD
         userDefaults.setInteger(tweets![indexPath.row].id!, forKey: "replyTo_ID")
         //userDefaults.setValue(tweets![indexPath.row].user?.handle!, forKey: "replyTo_handle")
         userDefaults.setValue(("@\(tweetIndexPath.user!.handle!)"), forKey: "replyTo_handle")
-//        let minimumSliderVal =  NSString(string: slideMinVal.text!).floatValue
         
         
         if let mediaFile = (tweetIndexPath.mediaURL) {
             cell.mediaView.setImageWithURL(mediaFile)
-            
             userDefaults.setURL(mediaFile, forKey: "mediaURL_String")
-            
             cell.mediaView.sizeToFit()
             cell.mediaView.layer.cornerRadius = 4
             cell.mediaView.clipsToBounds = true
         }
         return cell
     }
-    
     
     
     //convert time method
@@ -256,7 +250,6 @@ class TweetViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     //********* Segue *******
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-
         //pass data to "DetailsViewController"
        if (segue.identifier == "cellToDetails") {
             cellData(sender)
@@ -282,7 +275,7 @@ class TweetViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     
-    //****** Infinite Scroll ******//
+    //****** Infinite Scroll ******// issue, contents repeating
     var isMoreDataLoading = false
     var loadingMoreView: InfiniteScroll?
     let twitterApiParams = [ "since_id": 20, "count": 20 ]
@@ -358,19 +351,12 @@ class TweetViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
     }
-    
-//    func heartAnimation() {
-//        let ImageName = "heart-"
-//        var imagesNames = [ "\(ImageName)1","\(ImageName)2","\(ImageName)3","\(ImageName)4","\(ImageName)5","\(ImageName)6","\(ImageName)7","\(ImageName)8","\(ImageName)9","\(ImageName)10"]
-//        var images = [UIImage]()
-//        
-//        for i in 0..<imagesNames.count{
-//            images.append(UIImage(named: imagesNames[i])!)
-//        }
-//        imageView.animationImages = images
-//        imageView.startAnimating()
-//    }
-    
    
 }
+
+//extension TweetViewController: TweetTableViewCellDelegate {
+//    func userReplyToTweet(tweet: Tweet) {
+//        tweetsBackup = tweet
+//    }
+//}
 

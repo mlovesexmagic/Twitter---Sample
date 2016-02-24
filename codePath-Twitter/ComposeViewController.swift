@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ComposeViewController: UIViewController, UITextViewDelegate {
+class ComposeViewController: UIViewController, UITextViewDelegate, TweetCellDelegate {
 
     let userDefaults = NSUserDefaults.standardUserDefaults()
     
@@ -24,7 +24,10 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var tweetSendButton: UIButton!
     
-    var tweet: Tweet?
+    var tweetCompose: Tweet?
+    private var tweetCom = [Tweet]()
+
+    
     var replyId: Int?
     var replyHandle: String?
     
@@ -36,43 +39,46 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
         
         
         textView.delegate = self //Without setting the delegate you won't be able to track UITextView events
-
         userProfile.setImageWithURL(NSURL(string: User.currentUser!.profileViewUrl!)!)
         //userProfile.layer.cornerRadius = 5
         tweetSendButton.layer.cornerRadius = 4
-
-        userName.text = User.currentUser?.name
-        userHandle.text = User.currentUser?.handle
         
-        if tweet == tweet {
-            //replyToHandle(tweet!.user!.handle!)
-            replyId = userDefaults.integerForKey("detailReplyTo_ID")
-            replyHandle = userDefaults.stringForKey("detailReplyTo_Handle")
-            print("replyID \(replyId)")
-            print("handle is \(replyHandle)")
+        // my own name/handle
+//        userName.text = User.currentUser?.name
+//        userHandle.text = User.currentUser?.handle
+        
+        //userHandle.text = ("@\(tweetCompose!.user!.handle!)")
+        replyHandle = userDefaults.stringForKey("detailReplyTo_Handle")
+        
+        
+        if replyHandle != nil {
+            textView!.text = replyHandle
         }
-        
-        
-        // placeholder
-        placeholderLabel = UILabel()
-        //placeholderLabel.text = "What's fappening?"
-        placeholderLabel!.text = replyHandle
-        placeholderLabel.font = UIFont.italicSystemFontOfSize(textView.font!.pointSize)
-        placeholderLabel.sizeToFit()
-        textView.addSubview(placeholderLabel)
-        placeholderLabel.frame.origin = CGPointMake(5, textView.font!.pointSize / 2)
-        placeholderLabel.textColor = UIColor(white: 0, alpha: 0.3)
-        placeholderLabel.hidden = !textView.text.isEmpty
-        
-        
+        else {
+            // placeholder
+            placeholderLabel = UILabel()
+            placeholderLabel.text = "What's fappening?"
+            placeholderLabel.font = UIFont.italicSystemFontOfSize(textView.font!.pointSize)
+            placeholderLabel.sizeToFit()
+            textView.addSubview(placeholderLabel)
+            placeholderLabel.frame.origin = CGPointMake(5, textView.font!.pointSize / 2)
+            placeholderLabel.textColor = UIColor(white: 0, alpha: 0.3)
+            placeholderLabel.hidden = !textView.text.isEmpty
+        }
+
+      
     }
     
+    // protocol call
+    func userReplyToTweet(reply_screenNameYOOO: String) {
+
+    }
+    
+    // keyboard show/hide determins the "tweet" button's position
     func keyboardWillShow(notification: NSNotification) {
-        
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
             self.bottomView.frame.origin.y -= keyboardSize.height
         }
-        
     }
     
     func keyboardWillHide(notification: NSNotification) {
@@ -81,17 +87,11 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    
-    
-//    func replyToHandle(handle: String) {
-//        textView.text = handle
-//        //statusField.delegate?.textViewDidChange!(statusField)
-//    }
 
     //counting down on characters
     func textViewDidChange(textView: UITextView) {
         
-        placeholderLabel.hidden = !textView.text.isEmpty
+        //placeholderLabel.hidden = !textView.text.isEmpty
         
         //print(textView.text)
         if  0 < (141 - textView.text!.characters.count) {
@@ -121,6 +121,13 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+
+    
+    func insertTwitterHandle(handle: String) {
+        textView.text = handle
+        textView.delegate?.textViewDidChange!(textView)
+    }
+    
     //Dismiss ComposeView when clicked on stop
     @IBAction func cancelTweet(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -135,5 +142,5 @@ class ComposeViewController: UIViewController, UITextViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
+

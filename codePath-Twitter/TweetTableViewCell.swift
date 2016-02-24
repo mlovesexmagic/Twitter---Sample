@@ -9,11 +9,9 @@
 import UIKit
 import SwiftMoment
 
-protocol TweetTableViewCellDelegate {
-//    func userDidReplyToTweet(tweet: Tweet)
-//    func userDidFavoriteTweet(tweet: Tweet)
-//    func userDidRetweetTweet(tweet: Tweet)
-//    func userDidTapImageProfile(sender: UITapGestureRecognizer, user: User)
+protocol TweetCellDelegate {
+    func userReplyToTweet(reply_screenNameYOOO: String)
+  
 }
 
 class TweetTableViewCell: UITableViewCell {
@@ -59,7 +57,7 @@ class TweetTableViewCell: UITableViewCell {
         }
     }
     
-    var delegate: TweetTableViewCell?
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -87,18 +85,15 @@ class TweetTableViewCell: UITableViewCell {
             return "1m"
         }
     }
-    
-//
-//    func heartAnimation() {
-//        let ImageName = "heart-"
-//        var imagesNames = [ "\(ImageName)1","\(ImageName)2","\(ImageName)3","\(ImageName)4","\(ImageName)5","\(ImageName)6","\(ImageName)7","\(ImageName)8","\(ImageName)9","\(ImageName)10"]
-//        var images = [UIImage]()
-//        
-//        for i in 0..<imagesNames.count{
-//            images.append(UIImage(named: imagesNames[i])!)
-//        }
-//        imageView!.animationImages = images
-//        imageView!.startAnimating()
-//    }
 
+    
+    
+    var delegate: TweetCellDelegate?
+    
+    @IBAction func onReply(sender: AnyObject) {
+//        let screenNameString = userHandle.text
+//        print("\(screenNameString)")
+//        delegate!.userReplyToTweet(screenNameString!)
+    }
+    
 }

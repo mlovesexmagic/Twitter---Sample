@@ -27,10 +27,9 @@ class MentionViewController: UIViewController {
             self.mentionsTableView.estimatedRowHeight = 120
             //self.mentionsTableView.rowHeight = UITableViewAutomaticDimension
             self.mentionsTableView.reloadData()
-
             }
         }
-         mentionsTableView.reloadData()
+        mentionsTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
