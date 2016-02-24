@@ -20,10 +20,6 @@ The following **optional** features are implemented:
 - [x] User should be able to unretweet and unfavorite and should decrement the retweet and favorite count.
 - [x] User can pull to refresh.
 
-The following **additional** features are implemented:
-
-- [ ] List anything else that you can get done to improve the app functionality!
-
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
 1. Learning from an outdated video tutorial is exhausting due to lack of understanding the newest update information
@@ -89,7 +85,20 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+llowing **additional** features are implemented:
+
+- [x] Display retweet/likes when retweeted and liked in details view, else hides 
+- [x] Modified date formate in details view
+- [x] Mention View
+- [x] Enable retweet/favorite feature in cell and in details view
+- [x] Reply to friends/tweet
+- [x] Enable buttons to dismiss view controller
+- [x] Display tweet with media image if user has one
+- [x] Display location/website in profile view if user make it public
+- [x] Change the twitter logo’s color with respect to different view controller
+- [x] Disable send button when tweet is over 140 characters
+- [x] Send tweet height changes as keyboard shows/hides
+- [x] placeholder in textView, hide when editing begins and show when textView is empty
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
