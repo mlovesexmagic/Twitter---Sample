@@ -98,7 +98,8 @@ llowing **additional** features are implemented:
 - [x] Change the twitter logo’s color with respect to different view controller
 - [x] Disable send button when tweet is over 140 characters
 - [x] Send tweet height changes as keyboard shows/hides
-- [x] placeholder in textView, hide when editing begins and show when textView is empty
+- [x] Placeholder in textView, hide when editing begins and show when textView is empty
+- [x] When favorite icon is clicked, heart-animation show up
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
