@@ -6,7 +6,6 @@ use_frameworks!
 target 'codePath-Twitter' do
     pod "AFNetworking"
     pod "BDBOAuth1Manager"
-    pod "SwiftyJSON"
     pod "SwiftMoment"
 end
 

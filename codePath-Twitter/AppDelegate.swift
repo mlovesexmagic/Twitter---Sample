@@ -13,27 +13,37 @@ import BDBOAuth1Manager
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    var storyboard = UIStoryboard(name: "Main", bundle: nil)
+    var timelineStoryboard = UIStoryboard(name: "Timeline", bundle: nil)
+    var loginStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        //Creating Global Defaults
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.URLForKey("mediaURL_String")    //tweet image file address
+        
+        userDefaults.integerForKey("detailReplyTo_ID")    //reply to this id
+        userDefaults.stringForKey("detailReplyTo_Handle")
+        
+        
+        
+        
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout", name: userDidLogoutNotification, object: nil)
-        
         if User.currentUser != nil {
             // Go to the Logged In screen
             print("Current user detected: \(User.currentUser!.name)")
-            let vc = storyboard.instantiateViewControllerWithIdentifier("TweetNavigationController") as! UINavigationController
+            let vc = timelineStoryboard.instantiateViewControllerWithIdentifier("TweetTarBarController") as! UITabBarController
             window?.rootViewController = vc
-            
-            
-       
         }
         return true
     }
     
+    
+    //log out user will link back to "login" storyboard
     func userDidLogout() {
-        let vc = storyboard.instantiateInitialViewController()! as UIViewController
+        //let vc = storyboard.instantiateInitialViewController()! as UIViewController
+        let vc = loginStoryboard.instantiateViewControllerWithIdentifier("LogInViewController") as UIViewController
         window?.rootViewController = vc
     }
     
@@ -60,11 +70,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-        
         TwitterClient.sharedInstance.openURL(url)
-        
         return true
     }
+    
+    
+    
 }
 
 
