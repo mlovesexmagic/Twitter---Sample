@@ -102,8 +102,8 @@ llowing **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. 
-2. 
+1. Protcol usage/benefits
+2. Tips for reading/understanding/using Twitter API
 
 ## Video Walkthrough 
 
@@ -117,7 +117,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I runs into many walls and spending days on stackoverflow to find solutions. It's because I did not realize the point of this assignment is for us to learn and use protocol. I have been lookings for way to go around to pass data from the Cell.swift to other view controller. Working with multiple view controllers can be a headache but it's a lot of us. Another main challenge is the implemntation of "sub-view". I want to do more within a sing view controller but somehow I just cound not figure that out and being using an extra view controller as a temoporary fix.
 
 ## License
 
