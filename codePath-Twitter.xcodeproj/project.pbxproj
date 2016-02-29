@@ -19,14 +19,12 @@
 		3A9C43C01C6808D3005FAC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A9C43BF1C6808D3005FAC83 /* Assets.xcassets */; };
 		3A9C43C31C6808D3005FAC83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A9C43C11C6808D3005FAC83 /* LaunchScreen.storyboard */; };
 		3A9C43CD1C680B52005FAC83 /* TwitterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C43CC1C680B52005FAC83 /* TwitterClient.swift */; };
-		3AA117D61C7C412E00E59BBF /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA117D51C7C412E00E59BBF /* MeViewController.swift */; };
 		3AA28D861C751A7400963E7F /* TweetScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA28D851C751A7400963E7F /* TweetScreen.storyboard */; };
 		3AA28D881C7559BB00963E7F /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA28D871C7559BB00963E7F /* ComposeViewController.swift */; };
 		3AA28D8A1C7582FA00963E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA28D891C7582FA00963E7F /* Main.storyboard */; };
 		3AA28D8C1C75839900963E7F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA28D8B1C75839900963E7F /* LogInViewController.swift */; };
 		3AA28D921C75A25600963E7F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA28D911C75A25600963E7F /* ProfileViewController.swift */; };
 		3AA28D9A1C75B26C00963E7F /* Timeline.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA28D991C75B26C00963E7F /* Timeline.storyboard */; };
-		3AA369D61C7A6ADF00C3AB25 /* GSSimpleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AA369D51C7A6ADF00C3AB25 /* GSSimpleImageView.swift */; };
 		3AE43DAB1C79E98900D7364A /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE43DAA1C79E98900D7364A /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,14 +43,12 @@
 		3A9C43C21C6808D3005FAC83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A9C43C41C6808D3005FAC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A9C43CC1C680B52005FAC83 /* TwitterClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterClient.swift; sourceTree = "<group>"; };
-		3AA117D51C7C412E00E59BBF /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		3AA28D851C751A7400963E7F /* TweetScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TweetScreen.storyboard; sourceTree = "<group>"; };
 		3AA28D871C7559BB00963E7F /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		3AA28D891C7582FA00963E7F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3AA28D8B1C75839900963E7F /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		3AA28D911C75A25600963E7F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3AA28D991C75B26C00963E7F /* Timeline.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Timeline.storyboard; sourceTree = "<group>"; };
-		3AA369D51C7A6ADF00C3AB25 /* GSSimpleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSSimpleImageView.swift; sourceTree = "<group>"; };
 		3AE43DAA1C79E98900D7364A /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		9B3D4BADD613954E42FAFE3A /* Pods-codePath-Twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codePath-Twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-codePath-Twitter/Pods-codePath-Twitter.release.xcconfig"; sourceTree = "<group>"; };
 		C0B413506CC4F455409288AA /* Pods-codePath-Twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-codePath-Twitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-codePath-Twitter/Pods-codePath-Twitter.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,7 +115,6 @@
 				3A9C43BF1C6808D3005FAC83 /* Assets.xcassets */,
 				3A9C43B81C6808D3005FAC83 /* AppDelegate.swift */,
 				3A21BC0D1C7AB671009F6143 /* InfiniteScroll.swift */,
-				3AA369D51C7A6ADF00C3AB25 /* GSSimpleImageView.swift */,
 				3A9C43CA1C680B13005FAC83 /* Main-ViewController */,
 				3AE43DA91C79E92E00D7364A /* 2nd-ViewController */,
 				3A5916291C69CCE40094782D /* View */,
@@ -166,7 +161,6 @@
 				3AA28D8B1C75839900963E7F /* LogInViewController.swift */,
 				3AA28D871C7559BB00963E7F /* ComposeViewController.swift */,
 				3AE43DAA1C79E98900D7364A /* ImageViewController.swift */,
-				3AA117D51C7C412E00E59BBF /* MeViewController.swift */,
 				3A8E772E1C7CDE4100307449 /* MentionViewController.swift */,
 			);
 			name = "2nd-ViewController";
@@ -314,10 +308,8 @@
 				3AA28D881C7559BB00963E7F /* ComposeViewController.swift in Sources */,
 				3A21BC0E1C7AB671009F6143 /* InfiniteScroll.swift in Sources */,
 				3A5916281C69CCDF0094782D /* TweetTableViewCell.swift in Sources */,
-				3AA117D61C7C412E00E59BBF /* MeViewController.swift in Sources */,
 				3A995E741C71CF2B00C6E63C /* DetailTweetViewController.swift in Sources */,
 				3A8E772F1C7CDE4100307449 /* MentionViewController.swift in Sources */,
-				3AA369D61C7A6ADF00C3AB25 /* GSSimpleImageView.swift in Sources */,
 				3A9C43B91C6808D3005FAC83 /* AppDelegate.swift in Sources */,
 				3AE43DAB1C79E98900D7364A /* ImageViewController.swift in Sources */,
 				3A5916341C69D2540094782D /* User.swift in Sources */,
